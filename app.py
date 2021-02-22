@@ -17,7 +17,7 @@ posA = GetSystemMetrics(0) - 560
 posB = GetSystemMetrics(1) - 250
 appdir = Path(__file__).cwd()
 
-jira = JIRA('https://euromix.atlassian.net', basic_auth=('danil.kucherov@euromix.in.ua', 'XR1Mfu7IClBT3c87PRlt53CB'))
+jira = JIRA('https://<you_domain>.atlassian.net', basic_auth=('<you_mail>', '<you_token>'))
 iss = jira.search_issues('project=AD and assignee=currentuser() and not status=Done')
 print(len(iss))
 for issue in iss:
